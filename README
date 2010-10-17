@@ -1,0 +1,18 @@
+as of October 17th, 2010
+
+Sample Nhibernate 3.0 Application on VS2010
+
+This project can only be of use to developers who are new to NHibernate and 
+followed the Getting Started Guide from nhforge.org at 
+http://nhforge.org/wikis/howtonh/your-first-nhibernate-based-application.aspx
+
+
+Using:
+NHibernate 3.0.0 Beta 
+Visual Studio 2010 Web Developer Express
+NUNit 2.5.7 is used for the tests project.
+SQL Server 2005 as Database Engine (instead of MS SQL Server Compact Edition described in tutorial)
+
+
+NOTE: references to NHibernate.dll should be updated. Dll is not included in the project due to its size (2.59MB).
+		
