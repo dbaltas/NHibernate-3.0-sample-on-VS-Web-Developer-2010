@@ -14,7 +14,7 @@ NUNit 2.5.7 is used for the tests project.
 SQL Server 2005 as Database Engine (instead of MS SQL Server Compact Edition described in tutorial)
 
 To run successfully from NUnit, dlls should be copied 
-from HiberPlay\HiberLib\References
-to HiberPlay\HiberLib\bin\Debug
+from \HiberLib\References
+to \HiberLib.Tests\bin\Debug
 NOTE: there is no need to copy these dlls if your references to NHibernate.dll are from the NHibernate installation directory.
 
