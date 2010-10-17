@@ -12,16 +12,6 @@
 	-->
 	<session-factory>
 		<property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
-		<property name="connection.connection_string">Data Source=FirstSample.sdf</property>
-		<property name="dialect">NHibernate.Dialect.MsSql2000Dialect</property>
-		<property name="connection.connection_string">
-			Server=(local);initial catalog=nhibernate;Integrated Security=True
-		</property>
-		<property name="show_sql">true</property>
-	</session-factory>
-	<!--
-	<session-factory name="NHibernate.Test">
-		<property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
 		<property name="connection.connection_string">
 			Server=(local);initial catalog=nhibernate;Integrated Security=SSPI
 		</property>
@@ -33,6 +23,5 @@
 		<property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
 		<property name="proxyfactory.factory_class">NHibernate.ByteCode.LinFu.ProxyFactoryFactory, NHibernate.ByteCode.LinFu</property>
 	</session-factory>
-	-->
 </hibernate-configuration>
 
