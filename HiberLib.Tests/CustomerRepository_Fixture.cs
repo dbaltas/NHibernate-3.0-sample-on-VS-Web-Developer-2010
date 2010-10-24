@@ -5,6 +5,7 @@ using System.Text;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
+using NHibernate.Criterion;
 using NUnit.Framework;
 
 using HiberLib.Domain;
@@ -104,6 +105,21 @@ namespace HiberLib.Tests
 		}
 
 		[Test]
+		public void Can_Delete_All_Customers()
+		{
+			ICustomerRepository repository = new CustomerRepository();
+			repository.RemoveAll();
+			Assert.AreEqual(repository.Count(), 0);
+		}
+
+		[Test]
+		public void Can_Count()
+		{
+			ICustomerRepository repository = new CustomerRepository();
+			Assert.AreEqual(repository.Count(), _customers.Length);
+		}
+
+		[Test]
 		public void Can_get_existing_customer_by_id()
 		{
 			ICustomerRepository repository = new CustomerRepository();
@@ -143,6 +159,7 @@ namespace HiberLib.Tests
 			var fromDB = repository.GetByDateCreated(DateTime.Now.AddMinutes(-5), DateTime.Now.AddMinutes(5));
 
 			Assert.IsNotNull(fromDB);
+			// needs refactoring, hardcoded 3 from _Customers with dateCreated = now.
 			Assert.AreEqual(fromDB.Count, 3);
 		}
 

@@ -43,6 +43,28 @@ namespace HiberLib.Repositories
 			}
 		}
 
+		public void RemoveAll()
+		{
+			using (ISession session = NHibernateHelper.OpenSession())
+			{
+				using (ITransaction transaction = session.BeginTransaction())
+				{
+					session.Delete("from Customer c");
+					transaction.Commit();
+				}
+			}
+		}
+
+		public int Count()
+		{
+			using (ISession session = NHibernateHelper.OpenSession())
+			{
+				ICriteria criteria = session.CreateCriteria(typeof(Customer));
+				Int32 rowCount = criteria.SetProjection(NHibernate.Criterion.Projections.RowCount()).UniqueResult<int>();
+				return rowCount;
+			}
+		}
+
 		public Customer GetByID(Guid customerID)
 		{
 			using (ISession session = NHibernateHelper.OpenSession())
