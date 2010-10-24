@@ -17,3 +17,28 @@ To run successfully from NUnit, dlls should be copied
 from \HiberLib\References
 to \HiberLib.Tests\bin\Debug
 NOTE: there is no need to copy these dlls if your references to NHibernate.dll are from the NHibernate installation directory.
+
+
+
+Releases:
+
+first: [f2d9fa1a442c2975e1cc411e15d2430b635dae2a]
+implements Getting Started Guide from nhforge.org.
+
+last:
+New Domain Model: Customer
+Introduces: 
+- DateTime column and filter customers by DateCreated
+- Formula Property: Fullname
+
+
+USEFUL LINKS:
+Official Documentation:
+http://nhforge.org/doc/nh/en/index.html
+
+Getting Started Guide from nhforge.org:
+http://nhforge.org/wikis/howtonh/your-first-nhibernate-based-application.aspx
+
+move your NHibernate configuration to web.config:
+http://dotnetslackers.com/articles/aspnet/Configuring-NHibernate-with-ASP-NET.aspx
+
