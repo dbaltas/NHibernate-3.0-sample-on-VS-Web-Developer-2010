@@ -1,1 +1,1 @@
-"C:\Program Files\NUnit 2.5.7\bin\net-2.0\nunit.exe" HiberLib.Tests/bin/Debug/HiberLib.Tests.dll
+"C:\Program Files (x86)\NUnit 2.6\bin\net-2.0\nunit.exe" HiberLib.Tests/bin/Debug/HiberLib.Tests.dll

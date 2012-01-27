@@ -7,7 +7,7 @@
 		</id>
 		<property name="Firstname"/>
 		<property name="Lastname"/>
-		<property name="Fullname" formula="Firstname + ' ' + Lastname"/>
+		<property name="Fullname" formula="Firstname || ' ' || Lastname"/>
 		<property name="DateCreated"/>
 	</class>
 	
